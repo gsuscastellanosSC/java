@@ -2,16 +2,18 @@ package EntenderLaProgramacionOrientadaAObjetos;
 
 public class Doctor {
 	//Atributos
-	int id;
+	private static int id = 0; //Autoincrement
 	String name;
 	String speciality;
+	
 	//Constructor
-	public Doctor(int id, String name, String speciality) {
+	public Doctor(String name, String speciality) {
 		// TODO Auto-generated constructor stub
-		this.id = id;
+		this.id ++;
 		this.name = name;
 		this.speciality = speciality;
 	}
+	
 	//Metodos
 	public void showName() {
 		System.out.println(name);
