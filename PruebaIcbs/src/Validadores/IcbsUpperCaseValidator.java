@@ -1,9 +1,9 @@
 package Validadores;
 
-public class IcbsUpperCaseValidator implements IcbsValidator{
-	
+public class IcbsUpperCaseValidator extends IcbsValidatorNull {
+
 	@Override
-	public boolean validate(String cadena){
+	protected boolean doValidate(String cadena) {
 		return cadena.equals(cadena.toUpperCase());
 	}
 	

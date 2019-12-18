@@ -1,13 +1,13 @@
 package Validadores;
 
-public class main {
+public class Main {
 
 	public static void main(String[] args) {
 		IcbsValidator campo = new IcbsUpperCaseValidator();
-		
-		System.out.println(campo.validate("jesus"));
-		
+		String texto = "UNo";
+
+		System.out.println(campo.validate(texto));
+
 	}
-		
 
 }
