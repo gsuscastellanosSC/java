@@ -1,5 +1,6 @@
 package Empresa;
 
-public class Vehiculo {
-
+public interface Vehiculo {
+	void VerDisponibilidad(int capacidadDePersonas, float pesoMaximo);
+			
 }
