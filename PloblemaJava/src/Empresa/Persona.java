@@ -1,6 +1,7 @@
 package Empresa;
 
 import java.awt.List;
+import java.util.ArrayList;
 
 public class Persona {
 	private String nombre;
@@ -8,6 +9,7 @@ public class Persona {
 	private int edad;
 	private float peso;
 	private int cantidadPersonas;
+	static public java.util.List<Persona> Personas = new ArrayList<Persona>();
 	
 	public Persona(String nombre, String genero, int edad, float peso) {
 		this.nombre = nombre;
@@ -17,18 +19,7 @@ public class Persona {
 		this.cantidadPersonas = cantidadPersonas;
 	}
 	
-	public void subirPersona(String nombre, String genero, int edad, float peso, int cantidadPersonas) {
-		this.nombre = nombre;
-		
-	}
-	
-	
-	public void bajar(/*String nombre, String genero, int edad, float peso, int cantidadPersonas*/) {
-		System.out.println(nombre + " " + genero+ " " +edad+ " " +peso+ " " +cantidadPersonas);
-	}
-	
-	
-	public void VerPersonasFueraVehiculo(String nombre, String genero, int edad, float peso, int cantidadPersonas) {
-		System.out.println(nombre + " " + genero+ " " +edad+ " " +peso+ " " +cantidadPersonas);
+	public void VerPersonasFueraVehiculo() {
+		System.out.println(nombre + ", " + genero+ ", " +edad+ " Años, " +peso+ " Kg");
 	}
 }
