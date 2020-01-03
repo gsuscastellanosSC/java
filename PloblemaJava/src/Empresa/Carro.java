@@ -2,10 +2,13 @@ package Empresa;
 
 public class Carro implements Vehiculo{
 	
-	public String tipo= "Carro";
+	public String tipo;
+	int capacidad; 
+	float peso; 
+	int plazas; 
+	int ruedas;
 		
 	public Carro(int capacidad, float peso, int plazas, int ruedas) {
-		// TODO Auto-generated constructor stub
 		this.tipo = "Carro";
 	}
 	
@@ -28,6 +31,7 @@ public class Carro implements Vehiculo{
 	@Override
 	public void VerDisponibilidad() {
 		// TODO Auto-generated method stub
+		System.out.println(tipo +" " + " " + plazas +" "+ peso);
 		
 	}
 

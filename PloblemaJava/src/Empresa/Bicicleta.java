@@ -26,7 +26,7 @@ public class Bicicleta implements Vehiculo{
 	@Override
 	public void bajar(String NombrePersona, String NombreVehiculo) {
 		// TODO Auto-generated method stub
-		 System.out.println(tipo);
+		 System.out.println(tipo +" " + " " + plazas +" "+ peso);
 	}
 
 

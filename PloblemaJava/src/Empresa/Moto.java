@@ -2,7 +2,11 @@ package Empresa;
 
 public class Moto implements Vehiculo{
 	
-	public String tipo="Moto";
+	public String tipo;
+	int capacidad; 
+	float peso; 
+	int plazas; 
+	int ruedas;
 		
 	public Moto(int capacidad, float peso, int plazas, int ruedas){
 		this.tipo = "Moto";
@@ -25,7 +29,7 @@ public class Moto implements Vehiculo{
 
 	@Override
 	public void VerDisponibilidad() {
-		// TODO Auto-generated method stub
+		System.out.println(tipo +" " + " " + plazas +" "+ peso);
 		
 	}
 
