@@ -55,7 +55,7 @@ public class Menu {
 					break;
 				case 2:
 					System.out.println(" ");
-					Vehiculo.Vehiculos.get(0).getClass().;
+					Vehiculo.Vehiculos.get(0).getClass();
 					System.out.println();
 					
 					/*Carro.verPesonasDentroVehiculos();
