@@ -15,8 +15,9 @@ public class Exercise9 {
 		list_Strings.add("Orange");
 		list_Strings.add("White");
 		list_Strings.add("Black");
+		System.out.println(list_Strings.hashCode());
 		List<String> ArrayListCopy = CopyArrayListAToB(list_Strings);
-		System.out.println(ArrayListCopy);
+		System.out.println(ArrayListCopy.hashCode());
 		
 	}
 	public static List<String> CopyArrayListAToB(List<String> ArrayListA){
