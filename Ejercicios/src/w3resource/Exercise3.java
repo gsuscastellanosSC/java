@@ -12,10 +12,10 @@ public class Exercise3 {
 		list_Strings.add("Como");
 		list_Strings.add("Estás?");
 		System.out.println(list_Strings);
-		list_Strings.add(0,"Buenos dias");  //Al insertar siempre se hace en la última posición, pero al realizar este truco decidimos donde insertar;
+		insertOfFirstPosition(list_Strings,"Buenos días", 0);  //Al insertar siempre se hace en la última posición, pero al realizar este truco decidimos donde insertar;
 		System.out.println(list_Strings);
 	}
-	public static void insertOfFirstPosition() {
-		
+	public static void insertOfFirstPosition(List<String> list_Strings, String cadena, int pos) {
+		list_Strings.add(pos,cadena);
 	}
 }
