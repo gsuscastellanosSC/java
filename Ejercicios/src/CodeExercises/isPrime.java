@@ -2,9 +2,10 @@ package CodeExercises;
 
 import java.lang.reflect.Array;
 
+
 public class isPrime {
 	public static void main(String[] args) {
-		System.out.println(isPrime(2));
+		System.out.println(isPrime(169));
 	}
 	
 	public static Boolean isPrime(Integer n) {
