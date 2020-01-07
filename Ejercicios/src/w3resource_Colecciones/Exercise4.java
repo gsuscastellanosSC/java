@@ -1,9 +1,9 @@
-package w3resource;
+package w3resource_Colecciones;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Exercise2 {
+public class Exercise4 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -13,12 +13,10 @@ public class Exercise2 {
 		  list_Strings.add("Orange");
 		  list_Strings.add("White");
 		  list_Strings.add("Black");
-		  iterarArraList(list_Strings);
-		  System.out.println(list_Strings.getClass());
+		  System.out.println(retrieveAnelement(list_Strings,1));
+		  System.out.println(list_Strings);
 	}
-	public static void iterarArraList(List<String> list_Strings) {
-		for (String element : list_Strings) {
-		    System.out.println(element);
-		    }
+	public static String retrieveAnelement(List<String> list_Strings, int pos) {
+		return list_Strings.get(pos);
 	}
 }

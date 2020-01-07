@@ -1,4 +1,4 @@
-package w3resource;
+package w3resource_Colecciones;
 import java.util.*;
 public class Exercise1 {
   public static void main(String[] args) {
