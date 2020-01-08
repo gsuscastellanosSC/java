@@ -1,4 +1,4 @@
-package w3resource_Colecciones;
+package w3resource_Colecciones_ArrayList;
 
 import java.util.ArrayList;
 import java.util.List;

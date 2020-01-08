@@ -1,11 +1,11 @@
-package w3resource_Colecciones;
+package w3resource_Colecciones_ArrayList;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-public class Exercise11 {
+public class Exercise9 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -15,13 +15,13 @@ public class Exercise11 {
 		list_Strings.add("Orange");
 		list_Strings.add("White");
 		list_Strings.add("Black");
-		System.out.println("Antes " + list_Strings);
-		reverseElementsArrayList(list_Strings);
-		System.out.println("Despues" + list_Strings);
+		System.out.println(list_Strings.hashCode());
+		List<String> ArrayListCopy = CopyArrayListAToB(list_Strings);
+		System.out.println(ArrayListCopy.hashCode());
 		
 	}
-	public static List<String> reverseElementsArrayList(List<String> list_Strings){
-		Collections.reverse(list_Strings);
-		return list_Strings;
+	public static List<String> CopyArrayListAToB(List<String> ArrayListA){
+		ArrayList<String> ArrayListB = new ArrayList<String>(ArrayListA);
+		return ArrayListB;
 	}
 }

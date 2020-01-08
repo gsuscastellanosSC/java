@@ -1,11 +1,11 @@
-package w3resource_Colecciones;
+package w3resource_Colecciones_ArrayList;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-public class Exercise18 {
+public class Exercise14 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -15,12 +15,15 @@ public class Exercise18 {
 		list_Strings.add("Orange");
 		list_Strings.add("White");
 		list_Strings.add("Black");
-		System.out.println(isEmtyArrayList(list_Strings));
-		
+		System.out.println("Antes " + list_Strings);
+		changeElementAForElementB(list_Strings, 0, 4);
+		System.out.println("Despues " + list_Strings);
 		
 		
 	}
-	public static boolean isEmtyArrayList(List<String> list_Strings){
-		return list_Strings.isEmpty();
+	
+	public static void changeElementAForElementB(List<String> list_Strings, int posElementA, int posElementB){
+		Collections.swap(list_Strings, posElementA, posElementB);
 	}
+	
 }

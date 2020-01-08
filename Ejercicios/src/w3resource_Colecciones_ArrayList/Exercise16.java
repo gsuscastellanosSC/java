@@ -1,4 +1,4 @@
-package w3resource_Colecciones;
+package w3resource_Colecciones_ArrayList;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -16,8 +16,8 @@ public class Exercise16 {
 		list_Strings.add("White");
 		list_Strings.add("Black");
 		List<String> NewArrayListClone = cloneArrayListAToB(list_Strings);
-		System.out.println(list_Strings);
-		System.out.println(NewArrayListClone);
+		System.out.println(list_Strings.hashCode());
+		System.out.println(NewArrayListClone.hashCode());
 		
 	}
 	public static List<String> cloneArrayListAToB(List<String> ArrayListA){

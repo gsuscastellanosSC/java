@@ -1,4 +1,4 @@
-package w3resource_Colecciones;
+package w3resource_Colecciones_ArrayList;
 import java.util.*;
 public class Exercise1 {
   public static void main(String[] args) {
@@ -9,5 +9,7 @@ public class Exercise1 {
   list_Strings.add("White");
   list_Strings.add("Black");
   System.out.println(list_Strings);
- }
+  }
+  
+  
 }

@@ -1,11 +1,11 @@
-package w3resource_Colecciones;
+package w3resource_Colecciones_ArrayList;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-public class Exercise19 {
+public class Exercise17 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -15,13 +15,14 @@ public class Exercise19 {
 		list_Strings.add("Orange");
 		list_Strings.add("White");
 		list_Strings.add("Black");
-		System.out.println(trimCapacityOfAnArrayList(list_Strings));
-		
+		System.out.println("Antes "+list_Strings);
+		emptyArrayList(list_Strings);
+		System.out.println("Despues "+list_Strings);
 		
 		
 	}
-	public static List<String> trimCapacityOfAnArrayList(List<String> list_Strings){
-		((ArrayList<String>) list_Strings).trimToSize();
+	public static List<String> emptyArrayList(List<String> list_Strings){
+		list_Strings.removeAll(list_Strings);
 		return list_Strings;
 	}
 }
