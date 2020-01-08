@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import com.sun.org.apache.xml.internal.serializer.ElemDesc;
-
 public class allExercises {
 	static List<String> list_Strings;
 	static String element;
