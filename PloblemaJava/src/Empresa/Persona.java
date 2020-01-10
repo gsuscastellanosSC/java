@@ -2,24 +2,67 @@ package Empresa;
 
 import java.awt.List;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Set;
 
 public class Persona {
 	private String nombre;
 	private String genero; 
 	private int edad;
 	private float peso;
-	private int cantidadPersonas;
-	static public java.util.List<Persona> Personas = new ArrayList<Persona>();
-	
+	private static int cantidadPersonas;
+		
 	public Persona(String nombre, String genero, int edad, float peso) {
 		this.nombre = nombre;
 		this.genero = genero;
 		this.edad = edad;
 		this.peso = peso;
-		this.cantidadPersonas = cantidadPersonas;
 	}
 	
 	public void VerPersonasFueraVehiculo() {
 		System.out.println(nombre + ", " + genero+ ", " +edad+ " Años, " +peso+ " Kg");
 	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getGenero() {
+		return genero;
+	}
+
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+
+	public float getPeso() {
+		return peso;
+	}
+
+	public void setPeso(float peso) {
+		this.peso = peso;
+	}
+
+	public static int getCantidadPersonas() {
+		return cantidadPersonas;
+	}
+
+	public static void setCantidadPersonas(int cantidadPersonas) {
+		Persona.cantidadPersonas = cantidadPersonas;
+	}
+	
+	
 }

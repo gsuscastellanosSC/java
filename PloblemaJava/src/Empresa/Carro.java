@@ -2,42 +2,84 @@ package Empresa;
 
 public class Carro implements Vehiculo{
 	
-	public String tipo;
-	int capacidad; 
-	float peso; 
-	int plazas; 
-	int ruedas;
-		
+	private final String tipo;
+	private int capacidad; 
+	private float peso; 
+	private int plazas; 
+	public int getCapacidad() {
+		return capacidad;
+	}
+	public void setCapacidad(int capacidad) {
+		this.capacidad = capacidad;
+	}
+	public float getPeso() {
+		return peso;
+	}
+	public void setPeso(float peso) {
+		this.peso = peso;
+	}
+	public int getPlazas() {
+		return plazas;
+	}
+	public void setPlazas(int plazas) {
+		this.plazas = plazas;
+	}
+	public int getRuedas() {
+		return ruedas;
+	}
+	public void setRuedas(int ruedas) {
+		this.ruedas = ruedas;
+	}
+	public String getTipo() {
+		return tipo;
+	}
+
+	private int ruedas;
+	private static int cantidadCarros = 0;
+	
 	public Carro(int capacidad, float peso, int plazas, int ruedas) {
 		this.tipo = "Carro";
+		this.capacidad = capacidad;
+		this.peso = peso;
+		this.plazas = plazas;
+		this.ruedas = ruedas;
+		cantidadCarros++;
 	}
+	@Override
+	public Persona verPersonasFueraDeVehiculos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public static int getCantidadCarros() {
+		return cantidadCarros;
+	}
+	public static void setCantidadCarros(int cantidadCarros) {
+		Carro.cantidadCarros = cantidadCarros;
+	}
+	@Override
+	public Persona verPersonasDentroDeVehiculos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String verVehiculoesDisponiblesYSusDatos() {
+		// TODO Auto-generated method stub
+		return tipo + "s Disponibles: "+cantidadCarros + ", Peso: "+Float.toString(peso) + " Kilogramos Disponibles, " + "Plazas: "+ plazas +" disponibles";
+	}
+
+	@Override
+	public Vehiculo SubirPersonaAVehiculo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Vehiculo BajarPersonaDeVehiculo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	
-	@Override
-	public void bajar(String NombrePersona, String NombreVehiculo) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	@Override
-	public boolean Subir(String NombrePersona, String NombreVehiculo) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-
-
-
-	@Override
-	public void VerDisponibilidad() {
-		// TODO Auto-generated method stub
-		System.out.println(tipo +" " + " " + plazas +" "+ peso);
-		
-	}
-
-	@Override
-	public void verPesonasDentroVehiculos() {
-		System.out.println("Tipo Vehiculo: "+ tipo);
-		
-	}
 }

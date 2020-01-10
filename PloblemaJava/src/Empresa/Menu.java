@@ -1,35 +1,43 @@
 package Empresa;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Menu {
+	public static Set<Persona> personas = new HashSet<Persona>();
+	public static Set<Vehiculo> vehiculos = new HashSet<Vehiculo>();
+		
+	public static Vehiculo bicicleta = new Bicicleta(1, 100, 1, 2);
+	public static Vehiculo moto = new Moto(2, 150, 2, 2);
+	public static Vehiculo carro = new Carro(4, 500, 4, 4);
+		
+	public static Persona ana = new Persona("Ana", "mujer", 30, 70); 
+	public static Persona maria = new Persona("María", "mujer", 22, 58);
+	public static Persona juan = new Persona("Juan", "hombre", 31, 110);
+	public static Persona jose = new Persona("Jose", "hombre", 52, 100);
+	public static Persona pedro = new Persona("Pedro", "hombre", 24, 71);
+	public static Persona oscar = new Persona("Oscar", "hombre", 27, 65);
+	public static Persona juanita = new Persona("Juanita", "mujer", 44, 91);
+	public static Persona pablo = new Persona("Pablo", "hombre", 50, 80);
 	
-	public static void menu() {
-		//Personas		
-			Persona.Personas.add (new Persona("Ana", "Mujer", 30, 70));
-			Persona.Personas.add (new Persona("María", "Mujer", 22, 58));
-			Persona.Personas.add (new Persona("Juan", "hombre", 21, 110));
-			Persona.Personas.add (new Persona("Jose", "hombre", 52, 100));
-			Persona.Personas.add (new Persona("Pedro", "hombre", 24, 71));
-			Persona.Personas.add (new Persona("Oscar", "hombre", 27, 65));
-			Persona.Personas.add (new Persona("Juanita", "mujer", 44, 91));
-			Persona.Personas.add (new Persona("Pablo", "hombre", 50, 80));
-		//Personas
-		
-		//Vehículos
-			Vehiculo Bicicleta = new Bicicleta(1, 100, 1, 2);
-			Vehiculo Moto = new Moto(2, 150, 2, 2);
-			Vehiculo Carro = new Carro(4, 500, 4, 4);
 			
-			Vehiculo.Vehiculos.add(Bicicleta);
-			Vehiculo.Vehiculos.add(Moto);
-			Vehiculo.Vehiculos.add(Carro);
-		//Vehículos
+	public static void menu() {
+		vehiculos.add(bicicleta);
+		vehiculos.add(moto);
+		vehiculos.add(carro);
 		
-		/*Error al declarar de esta forma Vehiculo.Vehiculos.add(new Bicicleta("Bicicleta",1, 100, 1, 2));
-		Vehiculo.Vehiculos.add(new Moto("Moto", 2, 150, 2, 2));
-		Vehiculo.Vehiculos.add(new Carro("Carro", 4, 500, 4, 4)); Error al declarar de esta forma*/		
-		
+		personas.add(ana);
+		personas.add(maria);
+		personas.add(juan);
+		personas.add(jose);
+		personas.add(pedro);
+		personas.add(oscar);
+		personas.add(juanita);
+		personas.add(pablo);
+				
 		//Menu
 			int menu=0;
 			do {
@@ -43,49 +51,28 @@ public class Menu {
 	    		Scanner sc = new Scanner(System.in);
 	    		Scanner entrada=new Scanner(System.in);
 	    		menu = Integer.valueOf(sc.nextLine());
-	            
-	
+	            	    		
 		        switch (menu) {
 				case 1:
-					 System.out.println(" ");
-					 for (int i = 0; i <= Persona.Personas.size() - 1; i++) {
-				            Persona.Personas.get(i).VerPersonasFueraVehiculo();
-				        }
-					 System.out.println(" ");
+					for (Persona persona : personas) {
+						System.out.println("Nombre: "+persona.getNombre()+", Genero: "+persona.getGenero()+", Edad: "+persona.getEdad()+", Peso: "+persona.getPeso());
+					}
 					break;
 				case 2:
-					System.out.println(" ");
-					Vehiculo.Vehiculos.get(0).getClass();
-					System.out.println();
-					
-					/*Carro.verPesonasDentroVehiculos();
-					Bicicleta.verPesonasDentroVehiculos();
-					Moto.verPesonasDentroVehiculos();*/
-					
-					System.out.println(" ");
 					break;
 				case 3:
-					System.out.println(" ");
-					Carro.VerDisponibilidad();
-					Bicicleta.VerDisponibilidad();
-					Moto.VerDisponibilidad();
-					System.out.println(" ");
+					
+					for (Vehiculo vehiculo : vehiculos) {
+						System.out.println(vehiculo.verVehiculoesDisponiblesYSusDatos());
+					}
 					break;
 				case 4:
-					System.out.println("Digite el nombre de la persona");
-					String NombrePersona=entrada.nextLine();
-					System.out.println("Digite el vehículo");
-					String NombreVehiculo=entrada.nextLine();;
-					System.out.println(NombrePersona + " " + NombreVehiculo);
-					if(Vehiculo.Vehiculos.contains(NombreVehiculo)) {
-						System.out.println(Vehiculo.Vehiculos.contains(NombreVehiculo));
-					}else {
-						System.out.println(Vehiculo.Vehiculos.contains(NombreVehiculo));
-						System.out.println("El vehículo No Existe!");
-						};
+					
 					break;
 				case 5:
-					System.out.println("5) Bajar una persona de un vehículo: ídem");
+					
+					break;
+				case 6:
 					break;
 				default:
 					break;

@@ -1,12 +1,13 @@
 package Empresa;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public interface Vehiculo {
-	public static java.util.List Vehiculos = new ArrayList();
-	void verPesonasDentroVehiculos();
-	void VerDisponibilidad();
-	public boolean Subir(String NombrePersona, String NombreVehiculo);
-	public void bajar(String NombrePersona, String NombreVehiculo);
-			
+	Persona verPersonasFueraDeVehiculos();
+	Persona verPersonasDentroDeVehiculos();
+	String verVehiculoesDisponiblesYSusDatos();
+	Vehiculo SubirPersonaAVehiculo();
+	Vehiculo BajarPersonaDeVehiculo();
 }
