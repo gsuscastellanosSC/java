@@ -1,10 +1,8 @@
 package Empresa;
 
 import java.util.ArrayList;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.Set;
 
 public class Menu {
 	public static List<Persona> personas = new ArrayList<Persona>();
@@ -56,70 +54,91 @@ public class Menu {
 	            	    		
 		        switch (menu) {
 				case 1:
-					for (Persona persona : personas) {
-						System.out.println("Nombre: "+persona.getNombre()+", Genero: "+persona.getGenero()+", Edad: "+persona.getEdad()+", Peso: "+persona.getPeso());
-					}
+					verDatosPersonas(personas);
 					break;
 				case 2:
-					if(personasEnVehiculos.isEmpty()) {
-						System.out.println("No hay personas dentro de los vehículos \n");
-					}else {
-						for (Persona persona : personasEnVehiculos) {
-							System.out.println("Nombre: "+persona.getNombre()+", Genero: "+persona.getGenero()+", Edad: "+persona.getEdad()+", Peso: "+persona.getPeso()+" Tipo Vehículo: " + persona.getTipoVehiculo());
-						}
-					}
+					verDatosPersonasEnVehiculos(personasEnVehiculos);
 					break;
 				case 3:
-					for (Vehiculo vehiculo : vehiculos) {
-						System.out.println(vehiculo.verVehiculoesDisponiblesYSusDatos());
-					}
+					verVehiculos(vehiculos);
 					break;
 				case 4:
-					System.out.println("¡Hola! "
-							+ "\nPara subir una persona por favor escribe el nombre de la persona y el nombre del vehículo, separado por comas ','. "
-							+ "\nEjemplo: 'Ana,Bicicleta'\n");
-					element = sc.nextLine();
-					String[] elements = element.split(",");
-					if(elements.length==2) {
-						if (elements[1].equalsIgnoreCase("Bicicleta")){
-							bicicleta.SubirPersonaAVehiculo(elements);
-						}else if(elements[1].equalsIgnoreCase("Moto")){
-							moto.SubirPersonaAVehiculo(elements);
-						}else if(elements[1].equalsIgnoreCase("Carro")){
-							carro.SubirPersonaAVehiculo(elements);						
-						}else {
-							System.out.println("Sin coincidencias para los valores ingresados\n¡Valida e intenta de nuevo!");
-						}
-					}else {
-						System.out.println("Faltan elementos.\n¡Valida e intenta de nuevo!");
-					}
+					subirPersonas(sc);
 					break;
 				case 5:
-					System.out.println("¡Hola! "
-							+ "\nPara Bajar una persona por favor escribe el nombre de la persona y el nombre del vehículo, separado por comas ','. "
-							+ "\nEjemplo: 'Ana,Bicicleta'\n");
-					element = sc.nextLine();
-					String[] elements1 = element.split(",");
-					if(elements1.length==2) {
-						if (elements1[1].equalsIgnoreCase("Bicicleta")){
-							bicicleta.BajarPersonaDeVehiculo(elements1);
-						}else if(elements1[1].equalsIgnoreCase("Moto")){
-							moto.BajarPersonaDeVehiculo(elements1);
-						}else if(elements1[1].equalsIgnoreCase("Carro")){
-							carro.BajarPersonaDeVehiculo(elements1);						
-						}else {
-							System.out.println("Sin coincidencias para los valores ingresados\n¡Valida e intenta de nuevo!");
-						}
-					}else {
-						System.out.println("Faltan elementos.\n¡Valida e intenta de nuevo!");
-					}
+					bajarPersonas(sc);
 					break;
 				case 6:
 					break;
 				default:
+					System.out.println("Hasta pronto ;)");
 					break;
 				}
 			}while (menu != 0);
 		//Menu
+	}
+	public static void verDatosPersonas(List<Persona> alistPersonas) {
+		if(alistPersonas.isEmpty()) {
+			System.out.println("No hay personas fuera de los vehículos \n");
+		}else {
+			for (Persona persona : alistPersonas) {
+				System.out.println("Nombre: "+persona.getNombre()+", Genero: "+persona.getGenero()+", Edad: "+persona.getEdad()+" Años, Peso: "+persona.getPeso() +" Kilogramos") ;
+			}
+		}
+	}
+	
+	public static void verDatosPersonasEnVehiculos(List<Persona> alistPersonas) {
+		if(alistPersonas.isEmpty()) {
+			System.out.println("No hay personas dentro de los vehículos \n");
+		}else {
+			for (Persona persona : alistPersonas) {
+				System.out.println("Nombre: "+persona.getNombre()+", Genero: "+persona.getGenero()+", Edad: "+persona.getEdad()+" Años, Peso: "+persona.getPeso() +" Kilogramos" +", Tipo Vehículo: " + persona.getTipoVehiculo()) ;
+			}
+		}
+	}
+	public static void verVehiculos(List<Vehiculo> vehiculos) {
+		for (Vehiculo vehiculo : vehiculos) {
+			System.out.println(vehiculo.verVehiculoesDisponiblesYSusDatos());
+		}
+	}
+	public static void subirPersonas(Scanner sc) {
+		System.out.println("¡Hola! "
+				+ "\nPara subir una persona por favor escribe el nombre de la persona y el nombre del vehículo, separado por comas ','. "
+				+ "\nEjemplo: 'Ana,Bicicleta'\n");
+		element = sc.nextLine();
+		String[] elements = element.split(",");
+		if(elements.length==2) {
+			if (elements[1].equalsIgnoreCase("Bicicleta")){
+				bicicleta.SubirPersonaAVehiculo(elements);
+			}else if(elements[1].equalsIgnoreCase("Moto")){
+				moto.SubirPersonaAVehiculo(elements);
+			}else if(elements[1].equalsIgnoreCase("Carro")){
+				carro.SubirPersonaAVehiculo(elements);						
+			}else {
+				System.out.println("Sin coincidencias para los valores ingresados\n¡Valida e intenta de nuevo!");
+			}
+		}else {
+			System.out.println("Faltan elementos.\n¡Valida e intenta de nuevo!");
+		}
+	}
+	public static void bajarPersonas(Scanner sc) {
+		System.out.println("¡Hola! "
+				+ "\nPara Bajar una persona por favor escribe el nombre de la persona y el nombre del vehículo, separado por comas ','. "
+				+ "\nEjemplo: 'Ana,Bicicleta'\n");
+		element = sc.nextLine();
+		String[] elements1 = element.split(",");
+		if(elements1.length==2) {
+			if (elements1[1].equalsIgnoreCase("Bicicleta")){
+				bicicleta.BajarPersonaDeVehiculo(elements1);
+			}else if(elements1[1].equalsIgnoreCase("Moto")){
+				moto.BajarPersonaDeVehiculo(elements1);
+			}else if(elements1[1].equalsIgnoreCase("Carro")){
+				carro.BajarPersonaDeVehiculo(elements1);						
+			}else {
+				System.out.println("Sin coincidencias para los valores ingresados\n¡Valida e intenta de nuevo!");
+			}
+		}else {
+			System.out.println("Faltan elementos.\n¡Valida e intenta de nuevo!");
+		}
 	}
 }

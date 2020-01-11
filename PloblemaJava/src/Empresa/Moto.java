@@ -3,42 +3,30 @@ package Empresa;
 public class Moto implements Vehiculo{
 	
 	private final String tipo;
-	private int capacidad; 
-	private float peso; 
-	private int plazas; 
-	private int ruedas;
-	private static int cantidadVehiculos = 0;
+	private static int capacidad; 
+	private static float peso;
+	private final float pesoMaximo;
+	private static int plazas; 
+	private static int cantidadVehiculos;
 	
 	public Moto(int capacidad, float peso, int plazas, int ruedas) {
 		this.tipo = "Moto";
 		this.capacidad = capacidad;
+		pesoMaximo = peso;
 		this.peso = peso;
 		this.plazas = plazas;
-		this.ruedas = ruedas;
 		cantidadVehiculos++;
-	}
-
-	@Override
-	public Persona verPersonasFueraDeVehiculos() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Persona verPersonasDentroDeVehiculos() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Override
 	public String verVehiculoesDisponiblesYSusDatos() {
 		// TODO Auto-generated method stub
-		return tipo + "s Disponibles: "+cantidadVehiculos + ", Peso: "+Float.toString(peso) + " Kilogramos Disponibles, " + "Plazas: "+ plazas +" disponibles";
+		
+		return "Tipo Vehículo: " + tipo + ", Cantidad Vehículos: " +cantidadVehiculos + ", Peso Diponible: " + peso + " Kilogramos, Plazas Disponibles: "+ plazas + ", Capacida Máxima de Personas: " + capacidad + ", Peso Maximo: " + pesoMaximo + "Kilogramos";
 	}
 
-
 	@Override
-	public Vehiculo SubirPersonaAVehiculo(String[] elements) {
+	public void SubirPersonaAVehiculo(String[] elements) {
 		String nombrePersona = elements[0];
 		for (int i = 0; i < Menu.personas.size(); i++) {
 			if(Menu.personas.get(i).getNombre().equalsIgnoreCase(nombrePersona)) {
@@ -67,10 +55,9 @@ public class Moto implements Vehiculo{
 				i = Menu.personas.size();
 			}
 		}
-		return null;
 }
 	@Override
-	public Vehiculo BajarPersonaDeVehiculo(String[] elements) {
+	public void BajarPersonaDeVehiculo(String[] elements) {
 		// TODO Auto-generated method stub
 		String nombrePersona = elements[0];
 		String tipoVe = elements[1];
@@ -89,6 +76,5 @@ public class Moto implements Vehiculo{
 				System.out.println("Valide lo datos ingresados, no es posible bajar: " + nombrePersona + " del Vehículo: " + tipoVe);
 			}
 		}
-		return null;
 	}
 }

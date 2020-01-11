@@ -1,11 +1,5 @@
 package Empresa;
 
-import java.awt.List;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Set;
-
 public class Persona {
 	private String nombre;
 	private String genero; 
@@ -21,10 +15,6 @@ public class Persona {
 		this.peso = peso;
 	}
 	
-	public void VerPersonasFueraVehiculo() {
-		System.out.println(nombre + ", " + genero+ ", " +edad+ " Años, " +peso+ " Kg");
-	}
-
 	public String getNombre() {
 		return nombre;
 	}
