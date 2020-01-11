@@ -65,7 +65,7 @@ public class Menu {
 						System.out.println("No hay personas dentro de los vehículos \n");
 					}else {
 						for (Persona persona : personasEnVehiculos) {
-							System.out.println(persona.getNombre() +" "+persona.getEdad()+" "+persona.getGenero() );
+							System.out.println("Nombre: "+persona.getNombre()+", Genero: "+persona.getGenero()+", Edad: "+persona.getEdad()+", Peso: "+persona.getPeso()+" Tipo Vehículo: " + persona.getTipoVehiculo());
 						}
 					}
 					break;
@@ -95,7 +95,24 @@ public class Menu {
 					}
 					break;
 				case 5:
-					
+					System.out.println("¡Hola! "
+							+ "\nPara Bajar una persona por favor escribe el nombre de la persona y el nombre del vehículo, separado por comas ','. "
+							+ "\nEjemplo: 'Ana,Bicicleta'\n");
+					element = sc.nextLine();
+					String[] elements1 = element.split(",");
+					if(elements1.length==2) {
+						if (elements1[1].equalsIgnoreCase("Bicicleta")){
+							bicicleta.BajarPersonaDeVehiculo(elements1);
+						}else if(elements1[1].equalsIgnoreCase("Moto")){
+							moto.BajarPersonaDeVehiculo(elements1);
+						}else if(elements1[1].equalsIgnoreCase("Carro")){
+							carro.BajarPersonaDeVehiculo(elements1);						
+						}else {
+							System.out.println("Sin coincidencias para los valores ingresados\n¡Valida e intenta de nuevo!");
+						}
+					}else {
+						System.out.println("Faltan elementos.\n¡Valida e intenta de nuevo!");
+					}
 					break;
 				case 6:
 					break;

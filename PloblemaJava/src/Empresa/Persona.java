@@ -12,6 +12,7 @@ public class Persona {
 	private int edad;
 	private float peso;
 	private static int cantidadPersonas;
+	private String tipoVehiculo;
 		
 	public Persona(String nombre, String genero, int edad, float peso) {
 		this.nombre = nombre;
@@ -64,5 +65,11 @@ public class Persona {
 		Persona.cantidadPersonas = cantidadPersonas;
 	}
 	
-	
+	public String getTipoVehiculo() {
+		return tipoVehiculo;
+	}
+
+	public void setTipoVehiculo(String tipoVehiculo) {
+		this.tipoVehiculo = tipoVehiculo;
+	}
 }

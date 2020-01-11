@@ -10,16 +10,6 @@ public interface Vehiculo {
 	Persona verPersonasDentroDeVehiculos();
 	String verVehiculoesDisponiblesYSusDatos();
 	Vehiculo SubirPersonaAVehiculo(String[] elements);
-	Vehiculo BajarPersonaDeVehiculo();
+	Vehiculo BajarPersonaDeVehiculo(String[] elements);
 	
-	String getTipoVehiculo();
-	int getCapacidad();
-	float getPeso();
-	int getPlazas();
-	int getRuedas();
-	
-	void setPeso(float peso);
-	void setCapacidad(int capacidad);
-	void setPlazas(int plazas);
-	void setRuedas(int ruedas);
 }
