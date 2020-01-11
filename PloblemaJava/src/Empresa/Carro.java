@@ -6,34 +6,6 @@ public class Carro implements Vehiculo{
 	private int capacidad; 
 	private float peso; 
 	private int plazas; 
-	public int getCapacidad() {
-		return capacidad;
-	}
-	public void setCapacidad(int capacidad) {
-		this.capacidad = capacidad;
-	}
-	public float getPeso() {
-		return peso;
-	}
-	public void setPeso(float peso) {
-		this.peso = peso;
-	}
-	public int getPlazas() {
-		return plazas;
-	}
-	public void setPlazas(int plazas) {
-		this.plazas = plazas;
-	}
-	public int getRuedas() {
-		return ruedas;
-	}
-	public void setRuedas(int ruedas) {
-		this.ruedas = ruedas;
-	}
-	public String getTipo() {
-		return tipo;
-	}
-
 	private int ruedas;
 	private static int cantidadCarros = 0;
 	
@@ -45,18 +17,13 @@ public class Carro implements Vehiculo{
 		this.ruedas = ruedas;
 		cantidadCarros++;
 	}
+
 	@Override
 	public Persona verPersonasFueraDeVehiculos() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public static int getCantidadCarros() {
-		return cantidadCarros;
-	}
-	public static void setCantidadCarros(int cantidadCarros) {
-		Carro.cantidadCarros = cantidadCarros;
-	}
 	@Override
 	public Persona verPersonasDentroDeVehiculos() {
 		// TODO Auto-generated method stub
@@ -66,11 +33,11 @@ public class Carro implements Vehiculo{
 	@Override
 	public String verVehiculoesDisponiblesYSusDatos() {
 		// TODO Auto-generated method stub
-		return tipo + "s Disponibles: "+cantidadCarros + ", Peso: "+Float.toString(peso) + " Kilogramos Disponibles, " + "Plazas: "+ plazas +" disponibles";
+		return null;
 	}
 
 	@Override
-	public Vehiculo SubirPersonaAVehiculo() {
+	public Vehiculo SubirPersonaAVehiculo(String[] elements) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -81,5 +48,53 @@ public class Carro implements Vehiculo{
 		return null;
 	}
 
+	@Override
+	public String getTipoVehiculo() {
+		// TODO Auto-generated method stub
+		return tipo;
+	}
+
+	@Override
+	public int getCapacidad() {
+		// TODO Auto-generated method stub
+		return capacidad;
+	}
+
+	@Override
+	public float getPeso() {
+		// TODO Auto-generated method stub
+		return peso;
+	}
+
+	@Override
+	public int getPlazas() {
+		// TODO Auto-generated method stub
+		return plazas;
+	}
+
+	@Override
+	public int getRuedas() {
+		// TODO Auto-generated method stub
+		return ruedas;
+	}
+	@Override
+	public void setPeso(float peso) {
+		// TODO Auto-generated method stub
+		
+	}
 	
+	@Override
+	public void setCapacidad(int capacidad) {
+		this.capacidad = capacidad;
+	}
+
+	@Override
+	public void setPlazas(int plazas) {
+		this.plazas = plazas;
+	}
+
+	@Override
+	public void setRuedas(int ruedas) {
+		this.ruedas = ruedas;
+	}
 }

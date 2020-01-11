@@ -1,6 +1,8 @@
 package Empresa;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 
 public class Bicicleta implements Vehiculo{
@@ -21,35 +23,7 @@ public class Bicicleta implements Vehiculo{
 		cantidadBicicletas++;
 		
 	}
-	
-	public int getCapacidad() {
-		return capacidad;
-	}
-	public void setCapacidad(int capacidad) {
-		this.capacidad = capacidad;
-	}
-	public float getPeso() {
-		return peso;
-	}
-	public void setPeso(float peso) {
-		this.peso = peso;
-	}
-	public int getPlazas() {
-		return plazas;
-	}
-	public void setPlazas(int plazas) {
-		this.plazas = plazas;
-	}
-	public int getRuedas() {
-		return ruedas;
-	}
-	public void setRuedas(int ruedas) {
-		this.ruedas = ruedas;
-	}
-	public String getTipo() {
-		return tipo;
-	}
-	
+		
 	public static int getCantidadBicicletas() {
 		return cantidadBicicletas;
 	}
@@ -76,16 +50,80 @@ public class Bicicleta implements Vehiculo{
 	}
 
 	@Override
-	public Vehiculo SubirPersonaAVehiculo() {
-		// TODO Auto-generated method stub
+	public Vehiculo SubirPersonaAVehiculo(String[] elements) {
+		String nombrePersona = elements[0];
+		String tipoVehiculo = elements[1];
+		for (int i = 0; i < Menu.personas.size(); i++) {
+			if(Menu.personas.get(i).getNombre().equalsIgnoreCase(nombrePersona)) {
+				for (int j = 0; j < Menu.vehiculos.size(); j++) {
+					if(Menu.vehiculos.get(j).getTipoVehiculo().equalsIgnoreCase(tipoVehiculo)) {
+						Menu.vehiculos.get(j).setPeso(peso-Menu.personas.get(i).getPeso());
+						System.out.println(Menu.vehiculos);
+						j = Menu.vehiculos.size();
+						//Falta construir la lógica de descuento de peso y plazas
+						Menu.personasEnVehiculos.add(Menu.personas.get(i));//Subir al Vehiculo
+						Menu.personas.remove(i); //Persona No disponible
+					}
+				}
+				i = Menu.personas.size();
+			}
+		}
 		return null;
-	}
-
+}
 	@Override
 	public Vehiculo BajarPersonaDeVehiculo() {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public String getTipoVehiculo() {
+		// TODO Auto-generated method stub
+		return tipo;
+	}
+
+	@Override
+	public int getCapacidad() {
+		// TODO Auto-generated method stub
+		return capacidad;
+	}
+
+	@Override
+	public float getPeso() {
+		// TODO Auto-generated method stub
+		return peso;
+	}
+
+	@Override
+	public int getPlazas() {
+		// TODO Auto-generated method stub
+		return plazas;
+	}
+
+	@Override
+	public int getRuedas() {
+		// TODO Auto-generated method stub
+		return ruedas;
+	}
+
+	@Override
+	public void setPeso(float peso) {
+		// TODO Auto-generated method stub
 		
+	}
 	
+	@Override
+	public void setCapacidad(int capacidad) {
+		this.capacidad = capacidad;
+	}
+
+	@Override
+	public void setPlazas(int plazas) {
+		this.plazas = plazas;
+	}
+
+	@Override
+	public void setRuedas(int ruedas) {
+		this.ruedas = ruedas;
+	}
 }

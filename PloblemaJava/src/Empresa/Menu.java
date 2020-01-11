@@ -1,15 +1,17 @@
 package Empresa;
 
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
 public class Menu {
-	public static Set<Persona> personas = new HashSet<Persona>();
-	public static Set<Vehiculo> vehiculos = new HashSet<Vehiculo>();
-		
+	public static List<Persona> personas = new ArrayList<Persona>();
+	public static List<Vehiculo> vehiculos = new ArrayList<Vehiculo>();
+	public static List<Persona> personasEnVehiculos = new ArrayList<Persona>();
+	static String element;
+
 	public static Vehiculo bicicleta = new Bicicleta(1, 100, 1, 2);
 	public static Vehiculo moto = new Moto(2, 150, 2, 2);
 	public static Vehiculo carro = new Carro(4, 500, 4, 4);
@@ -59,15 +61,38 @@ public class Menu {
 					}
 					break;
 				case 2:
+					if(personasEnVehiculos.isEmpty()) {
+						System.out.println("No hay personas dentro de los vehículos \n");
+					}else {
+						for (Persona persona : personasEnVehiculos) {
+							System.out.println(persona.getNombre() +" "+persona.getEdad()+" "+persona.getGenero() );
+						}
+					}
 					break;
 				case 3:
-					
 					for (Vehiculo vehiculo : vehiculos) {
 						System.out.println(vehiculo.verVehiculoesDisponiblesYSusDatos());
 					}
 					break;
 				case 4:
-					
+					System.out.println("¡Hola! "
+							+ "\nPara subir una persona por favor escribe el nombre de la persona y el nombre del vehículo, separado por comas ','. "
+							+ "\nEjemplo: 'Ana,Bicicleta'\n");
+					element = sc.nextLine();
+					String[] elements = element.split(",");
+					if(elements.length==2) {
+						if (elements[1].equalsIgnoreCase("Bicicleta")){
+							bicicleta.SubirPersonaAVehiculo(elements);
+						}else if(elements[1].equalsIgnoreCase("Moto")){
+							moto.SubirPersonaAVehiculo(elements);
+						}else if(elements[1].equalsIgnoreCase("Carro")){
+							carro.SubirPersonaAVehiculo(elements);						
+						}else {
+							System.out.println("Sin coincidencias para los valores ingresados\n¡Valida e intenta de nuevo!");
+						}
+					}else {
+						System.out.println("Faltan elementos.\n¡Valida e intenta de nuevo!");
+					}
 					break;
 				case 5:
 					
