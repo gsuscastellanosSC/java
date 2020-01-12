@@ -20,9 +20,14 @@
 <fullyQualifiedTypeName name="w3resource_LinkedList.Colecciones_LinkedList"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="javax.print.DocFlavor.STRING"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="javax.sound.midi.Soundbank"/>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="Empresa.model.Vehiculo"/>
+<fullyQualifiedTypeName name="Empresa.model.Bicicleta"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.sun.xml.internal.org.jvnet.fastinfoset.sax.ExtendedContentHandler"/>
+<fullyQualifiedTypeName name="java.security.cert.Extension"/>
+<fullyQualifiedTypeName name="Empresa.model.medioTransporte"/>
 </qualifiedTypeNameHistroy>

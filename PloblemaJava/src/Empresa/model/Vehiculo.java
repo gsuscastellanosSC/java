@@ -46,6 +46,9 @@ public interface Vehiculo {
 				if(Persona.validaSiExistePersona(name_persona, Persona.personas)!= true) {
 					System.out.println("La persona "+name_persona +" no existe");
 				}
+				if(tipo_vehiculo.equalsIgnoreCase("Bicicleta") != true||tipo_vehiculo.equalsIgnoreCase("Moto") != true||tipo_vehiculo.equalsIgnoreCase("Carro") != true) {
+					System.out.println("El vehículo " + tipo_vehiculo +" no existe");
+				}
 				System.out.println("Valide lo datos ingresados, no es posible subir A: " + name_persona + " al Vehículo: " + tipo_vehiculo);
 				}
 		}else {
@@ -71,8 +74,14 @@ public interface Vehiculo {
 			}else if(tipo_vehiculo.equalsIgnoreCase("Carro") && Persona.validaSiExistePersona(name_persona, Vehiculo.personasEnVehiculos)) {
 				Carro.bajarPersonaDeVehiculo(name_persona, tipo_vehiculo);
 			}else {
-				System.out.println("Valide lo datos ingresados, no es posible bajar: " + name_persona + " del Vehículo: " + tipo_vehiculo);
+				if(Persona.validaSiExistePersona(name_persona, Persona.personasEnVehiculos)!= true) {
+					System.out.println("La persona "+name_persona +" no existe");
+				}
+				if(tipo_vehiculo.equalsIgnoreCase("Bicicleta") != true||tipo_vehiculo.equalsIgnoreCase("Moto") != true||tipo_vehiculo.equalsIgnoreCase("Carro") != true) {
+					System.out.println("El vehículo " + tipo_vehiculo +" no existe");
+				}
 			}
+			System.out.println("Valide lo datos ingresados, no es posible bajar A: " + name_persona + " del Vehículo: " + tipo_vehiculo);
 		}else {
 			System.out.println("Faltan elementos.\n¡Valida e intenta de nuevo!");
 		}

@@ -37,8 +37,6 @@ public class Menu {
 				case 5:
 					Vehiculo.bajarPersonaDeVehiculo(sc);
 					break;
-				case 6:
-					break;
 				default:
 					System.out.println("Hasta pronto ;)");
 					break;
