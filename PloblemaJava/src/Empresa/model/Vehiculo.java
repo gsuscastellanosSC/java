@@ -8,7 +8,7 @@ public interface Vehiculo {
 	
 	public static List<Vehiculo> vehiculos = new ArrayList<Vehiculo>();
 	public static List<Persona> personasEnVehiculos = new ArrayList<Persona>();
-	
+		
 	static void verVehiculos(List<Vehiculo> vehiculos) {
 		for (Vehiculo vehiculo : vehiculos) {
 			System.out.println(vehiculo.verVehiculoesDisponiblesYSusDatos());

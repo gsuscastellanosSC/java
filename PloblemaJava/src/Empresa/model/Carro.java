@@ -15,8 +15,8 @@ public class Carro implements Vehiculo{
 	
 	public Carro(int capacidad, float peso, int plazas, int ruedas) {
 		this.capacidad = capacidad;
-		pesoMaximo = peso;
 		this.peso = peso;
+		pesoMaximo = peso;
 		this.plazas = plazas;
 		cantidadVehiculos++;
 	}
@@ -37,7 +37,7 @@ public class Carro implements Vehiculo{
 						cantidadVehiculos--;
 					}
 					Vehiculo.personasEnVehiculos.add(Persona.personas.get(i));
-					Vehiculo.personasEnVehiculos.get(Vehiculo.personasEnVehiculos.size()-1).setTipoVehiculo(tipo_vehiculo);
+					Vehiculo.personasEnVehiculos.get(Vehiculo.personasEnVehiculos.size()-1).setTipoVehiculo(tipo);
 					System.out.println(name_persona+" Ahora esta en "+tipo_vehiculo);
 					Persona.personas.remove(i);
 				}else {

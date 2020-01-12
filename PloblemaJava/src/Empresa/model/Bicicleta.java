@@ -6,18 +6,17 @@ import Empresa.ui.Menu;
 
 public class Bicicleta implements Vehiculo{
 	
-	private static String tipo;
-	private static int capacidad; 
+	private static String tipo = "Bicicleta";
+	private int capacidad; 
 	private static float peso;
 	private final float pesoMaximo;
 	private static int plazas; 
 	private static int cantidadVehiculos;
 	
 	public Bicicleta(int capacidad, float peso, int plazas, int ruedas){
-		this.tipo = "Bicicleta";
 		this.capacidad = capacidad;
-		pesoMaximo = peso;
 		this.peso = peso;
+		pesoMaximo = peso;
 		this.plazas = plazas;
 		cantidadVehiculos++;
 		
@@ -44,7 +43,7 @@ public class Bicicleta implements Vehiculo{
 						cantidadVehiculos--;
 					}
 					Vehiculo.personasEnVehiculos.add(Persona.personas.get(i));
-					Vehiculo.personasEnVehiculos.get(Vehiculo.personasEnVehiculos.size()-1).setTipoVehiculo(tipo_vehiculo);
+					Vehiculo.personasEnVehiculos.get(Vehiculo.personasEnVehiculos.size()-1).setTipoVehiculo(tipo);
 					System.out.println(name_persona+" Ahora esta en "+tipo_vehiculo);
 					Persona.personas.remove(i);
 				}else {
