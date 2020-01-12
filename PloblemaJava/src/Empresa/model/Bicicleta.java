@@ -32,7 +32,7 @@ public class Bicicleta implements Vehiculo{
 		
 		return "Tipo Vehículo: " + tipo + ", Cantidad Vehículos: " +cantidadVehiculos + ", Peso Diponible: " + peso + " Kilogramos, Plazas Disponibles: "+ plazas + ", Capacida Máxima de Personas: " + capacidad + ", Peso Maximo: " + pesoMaximo + "Kilogramos";
 	}
-
+	
 	public static void SubirPersonaAVehiculo(String name_persona, String tipo_vehiculo) {
 		for (int i = 0; i < Persona.personas.size(); i++) {
 			if(Persona.personas.get(i).getNombre().equalsIgnoreCase(name_persona)) {

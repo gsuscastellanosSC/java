@@ -57,7 +57,6 @@ public class Carro implements Vehiculo{
 		}
 	}
 	
-	
 	public static void bajarPersonaDeVehiculo(String name_persona, String tipo_vehiculo) {
 		// TODO Auto-generated method stub
 		for (int i = 0; i < Vehiculo.personasEnVehiculos.size(); i++) {

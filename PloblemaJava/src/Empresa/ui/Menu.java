@@ -32,10 +32,10 @@ public class Menu {
 					Vehiculo.verVehiculos(Vehiculo.vehiculos);
 					break;
 				case 4:
-					Vehiculo.SubirPersonaAVehiculo(sc);
+					MenuSubirPersonas.menuSubirPeronas(sc);
 					break;
 				case 5:
-					Vehiculo.bajarPersonaDeVehiculo(sc);
+					MenuBajarPersona.bajar(sc);
 					break;
 				default:
 					System.out.println("Hasta pronto ;)");

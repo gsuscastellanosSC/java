@@ -20,6 +20,26 @@ public class Persona {
 		this.peso = peso;
 	}
 	
+	public static void verDatosPersonas(List<Persona> alistPersonas) {
+		if(alistPersonas.isEmpty()) {
+			System.out.println("No hay personas fuera de los vehículos \n");
+		}else {
+			for (Persona persona : alistPersonas) {
+				System.out.println("Nombre: "+persona.getNombre()+", Genero: "+persona.getGenero()+", Edad: "+persona.getEdad()+" Años, Peso: "+persona.getPeso() +" Kilogramos") ;
+			}
+		}
+	}
+	public static boolean validaSiExistePersona(String namePersona, List<Persona> arrList) {
+		boolean valida = false;
+		for (int i = 0; i < arrList.size(); i++) {
+			if(arrList.get(i).getNombre().equalsIgnoreCase(namePersona)) {
+				valida = true;
+				i = personas.size();
+			}
+		}
+		return valida;
+	}
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -66,25 +86,5 @@ public class Persona {
 
 	public void setTipoVehiculo(String tipoVehiculo) {
 		this.tipoVehiculo = tipoVehiculo;
-	}
-	
-	public static void verDatosPersonas(List<Persona> alistPersonas) {
-		if(alistPersonas.isEmpty()) {
-			System.out.println("No hay personas fuera de los vehículos \n");
-		}else {
-			for (Persona persona : alistPersonas) {
-				System.out.println("Nombre: "+persona.getNombre()+", Genero: "+persona.getGenero()+", Edad: "+persona.getEdad()+" Años, Peso: "+persona.getPeso() +" Kilogramos") ;
-			}
-		}
-	}
-	public static boolean validaSiExistePersona(String namePersona, List<Persona> arrList) {
-		boolean valida = false;
-		for (int i = 0; i < arrList.size(); i++) {
-			if(arrList.get(i).getNombre().equalsIgnoreCase(namePersona)) {
-				valida = true;
-				i = personas.size();
-			}
-		}
-		return valida;
 	}
 }
