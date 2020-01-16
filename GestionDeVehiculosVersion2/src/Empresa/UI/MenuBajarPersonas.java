@@ -31,7 +31,7 @@ public class MenuBajarPersonas {
 				}
 			}
 			if(personaDowm == false) {
-				System.out.println("No es posible bajar a la persona "+ name_persona + " En el vehículo " + tipo_vehiculo);
+				System.out.println("No es posible bajar a la persona "+ name_persona + " del vehículo " + tipo_vehiculo);
 			}
 		}else{
 			System.out.println("La cantidad de parametros ingresada no es correcta");

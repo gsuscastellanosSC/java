@@ -37,7 +37,7 @@ public abstract class Vehiculo {
 	
 	public void subirPersonas(int i, int j, String tipo_vehiculo) {
 		
-		if(vehiculos.get(i).getPeso() > vehiculos.get(i).getPeso()-Persona.personas.get(j).getPeso() && vehiculos.get(i).getCapacidad() > 0) {
+		if(vehiculos.get(i).getPeso() > Persona.personas.get(j).getPeso() && vehiculos.get(i).getCapacidad() > 0) {
 			setPeso(vehiculos.get(i).getPeso()-Persona.personas.get(j).getPeso());
 			setCapacidad((vehiculos.get(i).capacidad)-1);
 			Persona.personasVehiculo.add(Persona.personas.get(j));
@@ -46,7 +46,7 @@ public abstract class Vehiculo {
 			Persona.personas.remove(j);
 		}else {
 			System.out.println("Imposible subir a " + Persona.personas.get(j).getNombre() + " en el vehiculo " + tipo_vehiculo);
-			if(vehiculos.get(i).getPeso() < vehiculos.get(i).getPeso()-Persona.personas.get(j).getPeso()) {
+			if(vehiculos.get(i).getPeso() < Persona.personas.get(j).getPeso()) {
 				System.out.println("Se supera el peso disponible en el vehiculo " + tipo_vehiculo);
 			}
 			if(vehiculos.get(i).getCapacidad() == 0) {
