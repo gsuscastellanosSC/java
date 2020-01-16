@@ -20,7 +20,12 @@ public class MenuBajarPersonas {
 			String name_persona = elements[0];
 			for (int i = 0; i < Persona.personasVehiculo.size(); i++) {
 				if(Persona.validaNombrePersona(name_persona, Persona.personasVehiculo)[0] == 1 && Persona.personasVehiculo.get(i).getTipo_vehiculo().equalsIgnoreCase(tipo_vehiculo)) {
-					System.out.println(Persona.personasVehiculo.get(i).getTipo_vehiculo());
+					for (int j = 0; j < Vehiculo.vehiculos.size(); j++) {
+						if(Vehiculo.vehiculos.get(j).getClass().getTypeName().equalsIgnoreCase("Empresa.MODEL."+tipo_vehiculo)) {
+							Vehiculo.vehiculos.get(i).bajarPersonas(i, j, tipo_vehiculo);
+							j = Vehiculo.vehiculos.size();
+						}
+					}
 					i = Vehiculo.vehiculos.size();
 					personaDowm = true;
 				}

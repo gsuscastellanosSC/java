@@ -3,6 +3,9 @@ package Empresa.MODEL;
 import java.util.ArrayList;
 import java.util.List;
 
+import Empresa.UI.Menu;
+import Empresa.UI.MenuVerPersonasFueraVehiculos;
+
 
 public abstract class Vehiculo {
 	
@@ -53,7 +56,11 @@ public abstract class Vehiculo {
 	}
 	
 	public void bajarPersonas(int i, int j, String tipo_vehiculo) {
-		
+		System.out.println("Hola Bjar Personas");
+		Vehiculo.vehiculos.get(j).setPeso(Vehiculo.vehiculos.get(j).getPeso()+Persona.personasVehiculo.get(i).getPeso());
+		Vehiculo.vehiculos.get(j).setCapacidad(Vehiculo.vehiculos.get(j).getCapacidad()+1);
+		Persona.personas.add(Persona.personasVehiculo.get(i));
+		Persona.personasVehiculo.remove(i);
 	};
 	
 	public abstract  void verVehiculosDisponibles();
