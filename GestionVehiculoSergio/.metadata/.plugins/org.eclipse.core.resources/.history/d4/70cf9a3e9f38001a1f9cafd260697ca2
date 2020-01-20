@@ -1,0 +1,47 @@
+package model;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Vehiculo implements Serializable {
+	private int idTipo;
+	private Integer capacidad;
+	private Double peso;
+	private List<Persona> tripulantes;
+	
+	Vehiculo(int idTipo, Integer capacidad, Double peso) {
+		this.idTipo = idTipo;
+		this.capacidad = capacidad;
+		this.peso = peso;
+		this.tripulantes = new ArrayList<>();
+	}
+	
+	public int getIdTipo() {
+		return idTipo;
+	}
+	public void setIdTipo(int idTipo) {
+		this.idTipo = idTipo;
+	}
+	public Integer getCapacidad() {
+		return capacidad;
+	}
+	public void setCapacidad(Integer capacidad) {
+		this.capacidad = capacidad;
+	}
+	public Double getPeso() {
+		return peso;
+	}
+	public void setPeso(Double peso) {
+		this.peso = peso;
+	}
+	public List<Persona> getTripulantes() {
+		if (null == tripulantes ) {
+			tripulantes = new ArrayList<>();
+		}
+		return tripulantes;
+	}
+	public void setTripulantes(List<Persona> tripulantes) {
+		this.tripulantes = tripulantes;
+	}	
+}

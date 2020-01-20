@@ -1,0 +1,12 @@
+package service;
+
+import model.Persona;
+import model.Vehiculo;
+
+public interface GestionVehiculo {
+	void subirPersona(Vehiculo vehiculo, Persona persona);
+	
+	void bajarPersona(Vehiculo vehiculo, Persona persona);
+	
+	String obtenerVehiculos();
+}

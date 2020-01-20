@@ -30,8 +30,6 @@
 <fullyQualifiedTypeName name="es.pildorasInformaticas.pooAbstractas.Empleados"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="Empresa.model.Vehiculo"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="Empresa.MenuSubirPersonas"/>
 <fullyQualifiedTypeName name="Empresa.MenuBajarPersonas"/>
 <fullyQualifiedTypeName name="Empresa.Menu"/>
@@ -43,4 +41,11 @@
 <fullyQualifiedTypeName name="Empresa.Vehiculo"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="Empresa.Persona"/>
+<fullyQualifiedTypeName name="Empresa.UI.Menu"/>
+<fullyQualifiedTypeName name="Empresa.UI.MenuVerPersonasFueraVehiculos"/>
+<fullyQualifiedTypeName name="Empresa.MODEL.Persona"/>
+<fullyQualifiedTypeName name="Empresa.MODEL.Vehiculo"/>
+<fullyQualifiedTypeName name="EjerciciosDePolimorfismo.Forma"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>

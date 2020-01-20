@@ -1,0 +1,64 @@
+package service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import model.Persona;
+import model.Vehiculo;
+import service.GestionVehiculo;
+import validadores.ValidadorGestionVehiculo;
+import validadores.impl.ValidadorCapacidad;
+import validadores.impl.ValidadorPersona;
+import validadores.impl.ValidadorPeso;
+
+public class GestionVehiculoImpl implements GestionVehiculo {
+	
+	private List<ValidadorGestionVehiculo> validadores;
+	
+	public GestionVehiculoImpl() {
+		validadores.add(new ValidadorCapacidad());
+		validadores.add(new ValidadorPeso());
+		validadores.add(new ValidadorPersona());
+	}
+
+	@Override
+	public void subirPersona(Vehiculo vehiculo, Persona persona) throws Exception {
+		for (ValidadorGestionVehiculo validador:validadores) {
+			validador.validate(vehiculo, persona);
+		}
+		vehiculo.getTripulantes().add(persona);
+		persona.setEstaEnVehiculo(true);
+	}
+
+	@Override
+	public void bajarPersona(Vehiculo vehiculo, Persona persona) throws Exception {
+		if (vehiculo.getTripulantes().contains(persona)) {
+			vehiculo.getTripulantes().remove(persona);	
+			persona.setEstaEnVehiculo(false);
+		} else {
+			throw new Exception("La persona indicada no se encuentra dentro del vehiculo especificado.");
+		}
+		
+	}
+
+	@Override
+	public String obtenerVehiculo(Vehiculo vehiculo) {
+		StringBuilder vehiculoRespuesta = new StringBuilder();
+		if (vehiculo.getCapacidad() > vehiculo.getTripulantes().size()) {
+			vehiculoRespuesta.append(vehiculo).append(System.lineSeparator());
+			vehiculoRespuesta.append("plazas ocupadas: " + vehiculo.getTripulantes().size())
+					.append(System.lineSeparator());
+			vehiculoRespuesta
+					.append("plazas libres: " + (vehiculo.getCapacidad() - vehiculo.getTripulantes().size()))
+					.append(System.lineSeparator());
+			vehiculoRespuesta
+					.append("peso libre extra: " + (vehiculo.getPeso() - vehiculo.getTripulantes().stream()
+							.mapToDouble(p -> p.getPeso()).reduce(0, (a, b) -> a + b)))
+					.append(System.lineSeparator());
+		}
+		
+		return vehiculoRespuesta.toString();
+	}
+
+
+}

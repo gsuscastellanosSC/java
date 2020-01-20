@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="validadores.ValidadorGestionVehiculo"/>
+<fullyQualifiedTypeName name="validadores.impl.ValidadorCapacidad"/>
+<fullyQualifiedTypeName name="validadores.impl.ValidadorPeso"/>
+<fullyQualifiedTypeName name="validadores.impl.ValidadorPersona"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="model.TipoVehiculo"/>
+<fullyQualifiedTypeName name="service.GestionVehiculo"/>
+<fullyQualifiedTypeName name="service.impl.GestionVehiculoImpl"/>
+<fullyQualifiedTypeName name="java.util.stream.Collector"/>
+<fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="model.Vehiculo"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+</qualifiedTypeNameHistroy>

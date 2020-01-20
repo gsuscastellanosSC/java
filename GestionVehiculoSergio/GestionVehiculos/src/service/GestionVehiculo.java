@@ -1,0 +1,12 @@
+package service;
+
+import model.Persona;
+import model.Vehiculo;
+
+public interface GestionVehiculo {
+	void subirPersona(Vehiculo vehiculo, Persona persona) throws Exception;
+	
+	void bajarPersona(Vehiculo vehiculo, Persona persona) throws Exception;
+	
+	String obtenerVehiculo(Vehiculo vehiculo);
+}

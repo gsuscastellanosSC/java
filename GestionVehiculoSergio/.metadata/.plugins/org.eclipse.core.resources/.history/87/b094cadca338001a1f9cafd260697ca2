@@ -1,0 +1,8 @@
+package validadores;
+
+import model.Persona;
+import model.Vehiculo;
+
+public interface ValidadorGestionVehiculo {
+	Boolean isValid(Vehiculo vehiculo, Persona persona);
+}
