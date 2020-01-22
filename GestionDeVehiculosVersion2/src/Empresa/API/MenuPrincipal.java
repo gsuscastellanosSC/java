@@ -2,12 +2,12 @@ package Empresa.API;
 
 import java.util.Scanner;
 
-import Empresa.MODEL.Bicicleta;
-import Empresa.MODEL.Carro;
-import Empresa.MODEL.Moto;
-import Empresa.MODEL.Persona;
-import Empresa.MODEL.Vehiculo;
-import Empresa.UI.Menu;
+import empresa.model.Bicicleta;
+import empresa.model.Carro;
+import empresa.model.Moto;
+import empresa.model.Persona;
+import empresa.model.Vehiculo;
+import empresa.ui.Menu;
 
 public class MenuPrincipal {
 
