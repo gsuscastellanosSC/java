@@ -1,0 +1,9 @@
+package service;
+
+public interface GestionVehiculo {
+	void subirPersona();
+	
+	void bajarPersona();
+	
+	String obtenerVehiculos();
+}

@@ -1,0 +1,12 @@
+package validadores.impl;
+
+import model.Persona;
+import model.Vehiculo;
+import validadores.ValidadorGestionVehiculo;
+
+public class ValidadorCapacidad implements ValidadorGestionVehiculo {
+	@Override
+	public Boolean validate(Vehiculo vehiculo, Persona persona) {
+		return vehiculo.getCapacidad() > vehiculo.getTripulantes().size();
+	}
+}

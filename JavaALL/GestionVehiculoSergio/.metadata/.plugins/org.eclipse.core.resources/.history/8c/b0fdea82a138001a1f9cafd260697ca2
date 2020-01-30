@@ -1,0 +1,5 @@
+package validadores.impl;
+
+public class ValidadorCapacidad {
+
+}
