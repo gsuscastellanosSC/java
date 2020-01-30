@@ -1,8 +1,0 @@
-package validadores;
-
-import model.Persona;
-import model.Vehiculo;
-
-public interface ValidadorGestionVehiculo {
-	Boolean validate(Vehiculo vehiculo, Persona persona);
-}
