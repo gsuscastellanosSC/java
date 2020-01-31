@@ -1,6 +1,8 @@
 content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="patronAbstractFactory.pizzas.factories.Pizza"><rhs name\="patronAbstractFactory.pizzas.factories.CrearPizza"/></lhs><lhs name\="java.util.Iterator"><rhs name\="java.util.Scanner"/></lhs><lhs name\="java.io.Closeable"><rhs name\="java.util.Scanner"/></lhs><lhs name\="java.lang.AutoCloseable"><rhs name\="java.util.Scanner"/></lhs><lhs name\="factoryMethod.Product.Car"><rhs name\="factoryMethod.SportsCar"/></lhs><lhs name\="factoryMethod.Product.Carro"><rhs name\="factoryMethod.Product.SportsCar"/><rhs name\="factoryMethod.Product.FamilyCar"/></lhs><lhs name\="abstractFactoryInter.AbstractFactory.Cars"><rhs name\="abstractFactoryInter.AbstractFactory.SportCar"/></lhs><lhs name\="factoryMethod.Product.FamilyCar"><rhs name\="factoryMethod.Product.FamilyCar"/></lhs><lhs name\="abstractFactoryInter.AbstractFactory.Car"><rhs name\="abstractFactoryInter.Products.SportCar"/></lhs><lhs name\="abstractFactoryInter.Products.SportCar"><rhs name\="abstractFactoryInter.Products.SportCar"/></lhs><lhs name\="abstractFactoryInter.Factory.JoinCar"><rhs name\="abstractFactoryInter.Factory.JoinCar"/></lhs><lhs name\="abstractFactoryCars.interfaces.Car"><rhs name\="abstractFactoryCars.concreteClass.SportCar"/></lhs></history>
 content_assist_number_of_computers=18
 eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
 org.eclipse.jdt.ui.formatterprofiles.version=18
 spelling_locale_initialized=true
 useAnnotationsPrefPage=true
